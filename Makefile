@@ -1,3 +1,28 @@
+CC = g++
+CFLAGS = -Wall -std=c++11
+DEBUG_FLAGS = -g -DDEBUG
+RELEASE_FLAGS = -O2
+
+SRC_FILES = src/main.cpp
+
+all: debug release
+
+debug: CFLAGS += $(DEBUG_FLAGS)
+debug: build
+
+release: CFLAGS += $(RELEASE_FLAGS)
+release: build
+
+build: $(SRC_FILES)
+	$(CC) $(CFLAGS) $^ -o my_program
+
+clean:
+	rm -f my_program
+
+
+
+
+#original
 # # OBJS specifies which files to compile as part of the project
 # OBJS = src\main.cpp
 
