@@ -17,7 +17,7 @@ build: $(SRC_FILES)
 	$(CC) $(CFLAGS) $^ -o my_program
 
 clean:
-	rm -f my_program
+	rm -f my_program.exe
 
 
 
