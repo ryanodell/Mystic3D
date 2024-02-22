@@ -5,6 +5,9 @@ RELEASE_FLAGS = -O2
 
 SRC_FILES = src/main.cpp
 
+#flags: -lglfw3 -lgdi32 -lopengl32
+
+
 all: debug release
 
 debug: CFLAGS += $(DEBUG_FLAGS)
