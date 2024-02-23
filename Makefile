@@ -17,10 +17,10 @@ release: CFLAGS += $(RELEASE_FLAGS)
 release: build
 
 build: $(SRC_FILES)
-	$(CC) $(CFLAGS) $^ -o my_program
+	$(CC) $(CFLAGS) $^ -o main
 
 clean:
-	rm -f my_program.exe
+	rm -f main.exe
 
 
 
