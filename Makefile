@@ -16,11 +16,13 @@ debug: build
 release: CFLAGS += $(RELEASE_FLAGS)
 release: build
 
+OBJ_NAME = bin\main
+
 build: $(SRC_FILES)
-	$(CC) $(CFLAGS) $^ -o main
+	$(CC) $(CFLAGS) $^ -o $(OBJ_NAME)
 
 clean:
-	rm -f main.exe
+	rm -f bin\main.exe
 
 
 
