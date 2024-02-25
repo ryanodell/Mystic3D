@@ -3,22 +3,16 @@ CFLAGS = -Wall -std=c++11
 DEBUG_FLAGS = -g -DDEBUG
 RELEASE_FLAGS = -O2
 
-SRC_FILES = src/main.cpp src/glad.c
+SRC_FILES = src/main.cpp vendor/GLAD/include/glad.cpp
 
-#flags: -lglfw3 -lgdi32 -lopengl32
 INCLUDE_PATHS = -Ivendor/GLFW/include \
                 -Ivendor/GLAD/include \
                 -Ivendor/GLM
-
-# C:\ExternalLibs\GLFW\GLFW\lib\libglfw3.a
-# C:\ExternalLibs\GLFW\GLFW\lib\libglfw3dll.a
-# C:\MinGW\lib\libopengl32.a
 
 LIBRARY_PATHS = -Lvendor/GLFW/lib \
                 -LC:\MinGW\lib
 
 LINKER_FLAGS = -lglfw3 -lgdi32 -lopengl32
-
 
 all: debug release
 
