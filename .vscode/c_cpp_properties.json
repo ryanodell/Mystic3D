@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/vendor/GLFW/include",
                 "${workspaceFolder}/vendor/GLAD/include",
-                "${workspaceFolder}/vendor/GLM"
+                "${workspaceFolder}/vendor/GLM",
+                "${workspaceFolder}/vendor/STB_IMAGE"
             ],
             "defines": [
                 "_DEBUG",

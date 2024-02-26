@@ -8,7 +8,8 @@ DEPS = src/shader.h
 
 INCLUDE_PATHS = -Ivendor/GLFW/include \
                 -Ivendor/GLAD/include \
-                -Ivendor/GLM
+                -Ivendor/GLM \
+                -Ivendor/STB_IMAGE
 
 LIBRARY_PATHS = -Lvendor/GLFW/lib \
                 -LC:\MinGW\lib

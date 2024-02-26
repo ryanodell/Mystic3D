@@ -1,7 +1,10 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "shader.h"
+#define STB_IMAGE_IMPLEMENTATION
+#include "stb_image.h"
+#include "glm.hpp"
 
+#include "shader.h"
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -32,6 +35,8 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glm::vec2 tmp = glm::vec2(1.0f, 2.0f);
+    tmp++;
 
     // glfw window creation
     // --------------------
@@ -52,7 +57,7 @@ int main()
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-
+    stbi_set_flip_vertically_on_load(true);
 
     // build and compile our shader program
     // ------------------------------------
