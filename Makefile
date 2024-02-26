@@ -4,6 +4,7 @@ DEBUG_FLAGS = -g -DDEBUG
 RELEASE_FLAGS = -O2
 
 SRC_FILES = src/main.cpp vendor/GLAD/include/glad.cpp
+DEPS = src/shader.h
 
 INCLUDE_PATHS = -Ivendor/GLFW/include \
                 -Ivendor/GLAD/include \
@@ -30,7 +31,8 @@ build: $(SRC_FILES)
 clean:
 	rm -f bin\main.exe
 
-
+# Dependencies
+$(SRC_FILES): $(DEPS)
 
 
 #original
