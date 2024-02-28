@@ -53,7 +53,10 @@
 			"cinttypes": "cpp",
 			"typeinfo": "cpp",
 			"bitset": "cpp",
-			"cassert": "cpp"
+			"cassert": "cpp",
+			"cstring": "cpp",
+			"ctime": "cpp",
+			"iomanip": "cpp"
 		},
 		"files.exclude": {
 			"**/bin": true,
