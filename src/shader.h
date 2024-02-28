@@ -1,9 +1,8 @@
 #ifndef SHADER_H
 #define SHADER_H
-
-#include <glad/glad.h>
 #include <glm.hpp>
-
+#include <gtc/matrix_transform.hpp>
+#include <gtc/type_ptr.hpp>
 #include <string>
 #include <fstream>
 #include <sstream>
