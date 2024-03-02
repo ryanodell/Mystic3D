@@ -192,6 +192,12 @@ int main()
         glm::vec3( 1.5f,  0.2f, -1.5f), 
         glm::vec3(-1.3f,  1.0f, -1.5f)  
     };
+    // glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);  
+    // glm::vec3 camTarget = glm::vec3(0.0f, 0.0f, 0.0f);
+    // glm::vec3 camDirection = glm::normalize(cameraPos - camTarget);
+    // glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f); 
+    // glm::vec3 cameraRight = glm::normalize(glm::cross(up, camDirection));
+    // glm::vec3 cameraUp = glm::cross(camDirection, cameraRight);
 
     float frameModifier = 0;
     // render loop
@@ -219,6 +225,12 @@ int main()
         frameModifier += 0.000005f;
 
         glBindVertexArray(VAO);
+        const float radius = 10.0f;
+        float camX = sin(glfwGetTime()) * radius;
+        float camZ = cos(glfwGetTime()) * radius;
+        glm::mat4 view;
+        view = glm::lookAt(glm::vec3(camX, 0.0, camZ), glm::vec3(0.0, 0.0, 0.0), glm::vec3(0.0, 1.0, 0.0)); 
+        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
         for(unsigned int i = 0; i < 10; i++)
         {
             glm::mat4 model = glm::mat4(1.0f);
